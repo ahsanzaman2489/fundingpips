@@ -1,21 +1,23 @@
+# Demo 
+Demo: https://fundingpips.vercel.app/
+
+<img width="1336" alt="Screenshot 2025-03-04 at 2 51 50 PM" src="https://github.com/user-attachments/assets/8a7e7126-295c-4f7d-94a5-cb43149e3b66" />
 
 # Setup project locally
-Demo : https://fundingpips.vercel.app/
-
-- Make sure node version is 20 or greater
+- Make sure the node version is 20 or greater
 - `npm intstall`
 - `npm run dev` to run in dev environment
 - `npm run build `to generate production next build
 - `npm run start` to serve production next build
 - http://localhost:3000 watch list table
-- Click on view button to check history of specific stock
+- Click on the view button to check the history of specific stock
 
 # Setup Docker locally
-- Install Docker , i choose brew to install docker
+- Install Docker. I choose brew to install docker
 - Build Image `docker build -t nextjs-app .`
 - Run Container `docker run -p 3000:3000 nextjs-app`
 - http://localhost:3000 watch list table
-- Click on view button to check history of specific stock
+- Click on the view button to check the history of specific stock
 
 # Stack
 - Next 15
@@ -30,6 +32,7 @@ Demo : https://fundingpips.vercel.app/
 - View History of specific stock
 - Data is persisted in Zustand State
 - Responsive Design
+
 - Mocked Data Used to get mock real time updates on watch list
 - Used Next theme for dark/light mode
 
