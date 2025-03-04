@@ -1,96 +1,67 @@
-# Funding Pips - Senior Frontend Engineer Assessment
 
-## Overview
+# Setup project locally
+Demo : https://fundingpips.vercel.app/
 
-Welcome to the Funding Pips frontend assessment. This challenge is designed to evaluate your ability to **architect, build, and optimize a scalable, high-performance Next.js application**. We are looking for **self-driven engineers** who can make sound technical decisions **without micromanagement**.
+- Make sure node version is 20 or greater
+- `npm intstall`
+- `npm run dev` to run in dev environment
+- `npm run build `to generate production next build
+- `npm run start` to serve production next build
+- http://localhost:3000 watch list table
+- Click on view button to check history of specific stock
 
-## The Challenge
+# Setup Docker locally
+- Install Docker , i choose brew to install docker
+- Build Image `docker build -t nextjs-app .`
+- Run Container `docker run -p 3000:3000 nextjs-app`
+- http://localhost:3000 watch list table
+- Click on view button to check history of specific stock
 
-### Problem Statement
+# Stack
+- Next 15
+- React 19
+- Zustand (state management)
+- Tailwind Css
+- Next theme
 
-You need to build a **real-time stock tracking application** where users can:
+# Features 
+- Search for tickers
+- Watch List
+- View History of specific stock
+- Data is persisted in Zustand State
+- Responsive Design
+- Mocked Data Used to get mock real time updates on watch list
+- Used Next theme for dark/light mode
 
-- Search for stocks by name or ticker symbol.
-- View live stock price updates.
-- Analyze historical price trends.
-- Manage a watchlist of selected stocks.
+# My Approach 
+- I searched for realtime stock APP's but most of them were paid and i wanted to keep it free so i used mocked data
+- Working with Mock data is fast to deliver and easy to implement due to time constraint
+- I used Zustand for state management as it is easy to use and less boilerplate code
+- I keep folder structure simple and easy to understand
+- I used both Client side and Server side data fetching to achieve performance and SEO
+- History page is server side rendered with initial data to send to client
+- Search implemented to add ticker to watch list and than we can see their history
 
-### Requirements
+# Trade-offs
+- Mock data VS Real time data ==> Real time data is always better but due to time constraint i used mock data
+- Polling VS Websockets ==> Polling is easy to implement but websockets are better for real time data
+- Zustand VS Redux ==> Zustand is easy to use and less boilerplate code but Redux is better for large scale applications
+- Server side rendering VS Client side rendering ==> Server side rendering is better for SEO and performance but client side rendering is fast to implement
+- Tailwind CSS VS Styled Components ==> Tailwind is easy to use and fast to implement but styled components are better for large scale applications
+- Docker VS Vercel ==> Docker is better for local development but vercel is better for deployment
 
-- **Framework:** Must use **Next.js 15**.
-- **React Components:** Implement proper **Server Components (RSCs) vs. Client Components** for optimized performance.
-- **API Integration:** Use an appropriate **stock API** (e.g. Alpha Vantage, Yahoo Finance, or Polygon.io’s free tier) or mock the data if necessary.
-- **State Management:** Use a scalable approach (e.g. **React Context, Zustand, or Redux Toolkit**).
-- **UI/UX:** The design should be clean and responsive, using **Tailwind CSS**.
+# Features to Add in Future that is missed
+- Pagination
+- Sorting , Filtering
+- Search for stocks on client side
+- Real time data with Websockets
+- Add more data to history page
+- Testing
+- Proper Design
+- Add more features to watch list
+- Authentication for watch list
 
-## What We Are Looking For
-
-We want to see **how you approach building a Next.js system from scratch** but note that we don't expect everything to be perfect, it's about trade offs and how you approach problems to solve, you shouldn't need to spend anymore than 4-6 hours here as an example you could implement real time updates or add a poll to a http request, both achieve similar things but one is far quicker to deliver, this would be something to note in your trade offs or decisions made.
-
-Key areas we will evaluate:
-
-### 1️⃣ Architectural Decisions
-
-- Do you correctly structure the project for **scalability and maintainability**?
-- Are you effectively using **React Server Components (RSCs) vs. Client Components**?
-- Are you minimizing client-side JavaScript to optimize performance?
-
-### 2️⃣ Code Quality & Maintainability
-
-- Is the codebase modular and well-organized?
-- Are there reusable components?
-- Are TypeScript types properly defined and enforced?
-
-### 3️⃣ Performance Optimization
-
-- Are API calls optimized with **ISR (Incremental Static Regeneration), SSR, or caching (`next/cache`)**?
-- Are React components optimized to prevent unnecessary updates?
-- Is Turbopack leveraged for fast builds?
-
-### 4️⃣ Error Handling & Edge Cases
-
-- How does the app handle API failures?
-- Does it provide meaningful error messages?
-- How does it handle edge cases like an invalid stock ticker?
-
-### 5️⃣ Testing Strategy _(Optional but encouraged)_
-
-- Optional but it would be good to see at least one unit and one integration test.
-- Did you include unit or integration tests?
-- Are Jest and Testing Library used effectively?
-- How would you ensure the app remains stable as it scales?
-
-## Technical Constraints
-
-- **Must use Next.js 15, React 19, and TypeScript**.
-- **Tailwind CSS** is the preferred styling solution.
-- **State management can be done via React Context, Zustand, or Redux Toolkit**.
-
-## Bonus Points (Not Required but Impressive)
-
-- Implement WebSockets for real-time stock price updates.
-- Use **ISR (Incremental Static Regeneration) or SSR (Server-Side Rendering)** effectively.
-- Provide a **Dockerfile** for easy deployment.
-- Implement authentication (OAuth, Firebase, etc.) for user watchlists.
-- Optimize rendering using **caching, and or efficient data fetching strategies**.
-
-## Deliverables
-
-- A **GitHub repository** with your implementation.
-- A **README file** explaining:
-  - Your architectural decisions.
-  - How to run the project.
-  - Any trade-offs or optimizations you made.
-- (Optional) A short Loom video or document explaining your approach.
-
-## Submission Instructions
-
-1. Clone this repository.
-2. Complete the implementation.
-3. Submit a link to your repo and ideally a link to your working application on vercel/netlify or equivalent.
-
-## Final Notes
-
-This is not just about "getting it working" - we are looking for **scalability, performance, and decision-making skills**. Show us how you think as a **senior engineer**.
-
-Good luck, and happy coding! 🚀
+# Impressive things which I have covered
+- Docker File for easy deployment
+- Cached history response for optimize rendering
+- Used SSR (Server-Side Rendering) effectively
